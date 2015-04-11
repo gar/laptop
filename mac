@@ -168,6 +168,10 @@ brew_install_or_upgrade 'imagemagick'
 
 fancy_echo "Updating testing tools ..."
 brew_install_or_upgrade 'qt'
+brew_install_or_upgrade 'hub'
+brew_install_or_upgrade 'node'
+brew_install_or_upgrade 'tree'
+brew_install_or_upgrade 'watch'
 
 fancy_echo "Updating programming languages ..."
 brew_install_or_upgrade 'libyaml' # should come after openssl
