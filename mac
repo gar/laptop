@@ -173,7 +173,6 @@ brew_install_or_upgrade 'node'
 brew_install_or_upgrade 'tree'
 brew_install_or_upgrade 'watch'
 brew_install_or_upgrade 'ssh-copy-id'
-brew_install_or_upgrade 'sbt'
 
 fancy_echo "Updating programming languages ..."
 brew_install_or_upgrade 'libyaml' # should come after openssl
@@ -248,7 +247,6 @@ brew_cask_install 'skype'
 brew_cask_install 'licecap'
 brew_cask_install 'moom'
 brew_cask_install 'alfred'
-brew_cask_install 'scala-ide'
 
 if [ -f "$HOME/.laptop.local" ]; then
   fancy_echo "Running your customizations from ~/.laptop.local ..."
