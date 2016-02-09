@@ -151,9 +151,12 @@ brew_install_or_upgrade 'git'
 brew_install_or_upgrade 'openssl'
 brew_install_or_upgrade 'rcm'
 brew_install_or_upgrade 'reattach-to-user-namespace'
+brew_install_or_upgrade 'ssh-copy-id'
 brew_install_or_upgrade 'the_silver_searcher'
 brew_install_or_upgrade 'tmux'
+brew_install_or_upgrade 'tree'
 brew_install_or_upgrade 'vim'
+brew_install_or_upgrade 'watch'
 brew_install_or_upgrade 'zsh'
 
 fancy_echo "Updating Heroku tools ..."
@@ -168,11 +171,6 @@ brew_install_or_upgrade 'imagemagick'
 
 fancy_echo "Updating testing tools ..."
 brew_install_or_upgrade 'qt'
-brew_install_or_upgrade 'hub'
-brew_install_or_upgrade 'node'
-brew_install_or_upgrade 'tree'
-brew_install_or_upgrade 'watch'
-brew_install_or_upgrade 'ssh-copy-id'
 
 fancy_echo "Updating programming languages ..."
 brew_install_or_upgrade 'libyaml' # should come after openssl
