@@ -64,7 +64,7 @@ case "$SHELL" in
     fancy_echo "Changing your shell to zsh ..."
       # Make sure shell exists in /etc/shells before changing
       zsh_path=$(which zsh)
-      grep -q -F '$zsh_path' /etc/shells || echo '$zsh_path' >> /etc/shells
+      grep -q -F $zsh_path /etc/shells || echo $zsh_path | sudo tee -a /etc/shells
       chsh -s "$zsh_path"
     ;;
 esac
