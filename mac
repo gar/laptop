@@ -180,6 +180,12 @@ brew_install_or_upgrade 'redis'
 brew_launchctl_restart 'postgresql'
 brew_launchctl_restart 'redis'
 
+fancy_echo "Updating docker ..."
+brew_install_or_upgrade 'caskroom/cask/virtualbox'
+brew_install_or_upgrade 'docker'
+brew_install_or_upgrade 'docker-machine'
+docker-machine create --driver virtualbox dev
+
 fancy_echo "Configuring Ruby ..."
 find_latest_ruby() {
   rbenv install -l | grep -v - | tail -1 | sed -e 's/^ *//'
