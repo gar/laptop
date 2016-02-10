@@ -244,7 +244,7 @@ fancy_echo "Updating docker ..."
 brew_install_or_upgrade 'caskroom/cask/virtualbox'
 brew_install_or_upgrade 'docker'
 brew_install_or_upgrade 'docker-machine'
-docker-machine create --driver virtualbox dev
+docker-machine ls | grep --quiet "^dev" || docker-machine create --driver virtualbox dev
 
 brew_cask_install 'vagrant'
 
