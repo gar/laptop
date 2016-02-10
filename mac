@@ -134,11 +134,6 @@ if ! command -v brew >/dev/null; then
     export PATH="/usr/local/bin:$PATH"
 fi
 
-if brew list | grep -Fq brew-cask; then
-  fancy_echo "Uninstalling old Homebrew-Cask ..."
-  brew uninstall --force brew-cask
-fi
-
 fancy_echo "Updating Homebrew formulae ..."
 brew tap thoughtbot/formulae
 
@@ -225,8 +220,6 @@ brew_cask_install_or_upgrade() {
 }
 
 fancy_echo "Installing essential apps from homebrew cask..."
-brew tap caskroom/cask
-brew_install_or_upgrade 'brew-cask'
 
 brew_cask_install '1password'
 brew_cask_install 'alfred'
