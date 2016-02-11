@@ -219,7 +219,9 @@ fancy_echo "Installing essential apps from homebrew cask..."
 
 brew_cask_install '1password'
 brew_cask_install 'alfred'
+brew_cask_install 'couchpotato'
 brew_cask_install 'dropbox'
+brew_cask_install 'flux'
 brew_cask_install 'garmin-express'
 brew_cask_install 'google-chrome'
 brew_cask_install 'java'
@@ -228,9 +230,12 @@ brew_cask_install 'moom'
 brew_cask_install 'skype'
 brew_cask_install 'slack'
 brew_cask_install 'spotify'
-brew_cask_install 'virtualbox'
+brew_cask_install 'utorrent'
 brew_cask_install 'vagrant'
+brew_cask_install 'virtualbox'
+brew_cask_install 'vlc'
 
+# This has to happen after cask install of virutalbox
 fancy_echo "Updating docker ..."
 brew_install_or_upgrade 'docker'
 brew_install_or_upgrade 'docker-machine'
