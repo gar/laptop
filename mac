@@ -255,6 +255,9 @@ defaults write NSGlobalDomain KeyRepeat -int 0
 # Increase sound quality for Bluetooth headphones/headsets
 defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
 
+# Hide dock
+osascript -e "tell application \"System Events\" to set the autohide of the dock preferences to true"
+
 fancy_echo "Setting up dotfiles ..."
 if [ -d ~/.dotfiles ]; then
   cd ~/.dotfiles &&
