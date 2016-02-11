@@ -266,8 +266,9 @@ osascript -e "tell application \"System Events\" to set the autohide of the dock
 fancy_echo "Setting up dotfiles ..."
 if [ -d ~/.dotfiles ]; then
   cd ~/.dotfiles &&
-    git stash save "temporarily stash any changes until repo updated" &&
+    git stash save "temp stash while running mac setup script" &&
     git pull origin master &&
+    git stash list | grep -q "temp stash while running mac setup script" &&
     git stash pop
 else
   git clone https://github.com/gar/dotfiles ~/.dotfiles
