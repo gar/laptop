@@ -1,9 +1,5 @@
 #!/bin/sh
 
-# Welcome to the thoughtbot laptop script!
-# Be prepared to turn your laptop (or desktop, no haters here)
-# into an awesome development machine.
-
 fancy_echo() {
   local fmt="$1"; shift
 
@@ -261,12 +257,6 @@ defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int
 
 fancy_echo "Setting up dotfiles ..."
 cd && git clone https://github.com/gar/dotfiles .dotfiles && yes | rcup
-
-if [ -f "$HOME/.laptop.local" ]; then
-  fancy_echo "Running your customizations from ~/.laptop.local ..."
-  # shellcheck disable=SC1090
-  . "$HOME/.laptop.local"
-fi
 
 fancy_echo "Finished setting up mac, but you may want to do some of the following manually"
 fancy_echo "  - Change caps-lock to ctrl key"
