@@ -256,7 +256,15 @@ defaults write NSGlobalDomain KeyRepeat -int 0
 defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
 
 fancy_echo "Setting up dotfiles ..."
-cd && git clone https://github.com/gar/dotfiles .dotfiles && yes | rcup
+if [ -d ~/.dotfiles ]; then
+  cd ~/.dotfiles &&
+    git stash save "temporarily stash any changes until repo updated" &&
+    git pull origin master &&
+    git stash pop
+else
+  git clone https://github.com/gar/dotfiles ~/.dotfiles
+fi
+yes | rcup
 
 fancy_echo "Finished setting up mac, but you may want to do some of the following manually"
 fancy_echo "  - Change caps-lock to ctrl key"
