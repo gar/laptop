@@ -147,6 +147,7 @@ brew_install_or_upgrade 'tmux'
 brew_install_or_upgrade 'tree'
 brew_install_or_upgrade 'vim'
 brew_install_or_upgrade 'watch'
+brew_install_or_upgrade 'watchman'
 brew_install_or_upgrade 'zsh'
 
 fancy_echo "Updating Heroku tools ..."
@@ -195,9 +196,10 @@ gem_install_or_update 'bundler'
 number_of_cores=$(sysctl -n hw.ncpu)
 bundle config --global jobs $((number_of_cores - 1))
 
-fancy_echo "Installing node packages ..."
+fancy_echo "Upgrading node packages ..."
 npm -g install ember-cli
 npm -g install bower
+npm -g install phantomjs
 
 # Install brew cask and install program via brew cask
 brew_cask_expand_alias() {
