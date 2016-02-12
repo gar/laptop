@@ -193,6 +193,7 @@ bundle config --global jobs $((number_of_cores - 1))
 
 fancy_echo "Installing node packages ..."
 npm -g install ember-cli
+npm -g install bower
 
 # Install brew cask and install program via brew cask
 brew_cask_expand_alias() {
