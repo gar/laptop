@@ -199,7 +199,7 @@ bundle config --global jobs $((number_of_cores - 1))
 fancy_echo "Upgrading node packages ..."
 npm -g install ember-cli
 npm -g install bower
-npm -g install phantomjs
+npm -g install phantomjs-prebuilt
 
 # Install brew cask and install program via brew cask
 brew_cask_expand_alias() {
