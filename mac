@@ -252,6 +252,7 @@ brew_cask_install 'vlc'
 fancy_echo "Updating docker ..."
 brew_install_or_upgrade 'docker'
 brew_install_or_upgrade 'docker-machine'
+brew_install_or_upgrade 'docker-compose'
 docker-machine ls | grep --quiet "^default" || docker-machine create --driver virtualbox default
 
 fancy_echo "Configuring OSX ..."
