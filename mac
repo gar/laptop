@@ -138,6 +138,7 @@ brew update
 fancy_echo "Updating Unix tools ..."
 brew_install_or_upgrade 'ctags'
 brew_install_or_upgrade 'git'
+brew_install_or_upgrade 'nmap'
 brew_install_or_upgrade 'openssl'
 brew_install_or_upgrade 'rcm'
 brew_install_or_upgrade 'reattach-to-user-namespace'
