@@ -230,6 +230,7 @@ fancy_echo "Installing essential apps from homebrew cask..."
 
 brew_cask_install '1password'
 brew_cask_install 'alfred'
+brew_cask_install 'atom'
 brew_cask_install 'caffeine'
 brew_cask_install 'couchpotato'
 brew_cask_install 'dropbox'
