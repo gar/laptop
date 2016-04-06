@@ -165,6 +165,7 @@ fancy_echo "Updating testing tools ..."
 brew_install_or_upgrade 'qt'
 
 fancy_echo "Updating programming languages ..."
+brew_install_or_upgrade 'elixir'
 brew_install_or_upgrade 'libyaml' # should come after openssl
 brew_install_or_upgrade 'node'
 brew_install_or_upgrade 'rbenv'
